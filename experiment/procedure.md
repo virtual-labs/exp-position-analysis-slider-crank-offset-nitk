@@ -1,1 +1,3 @@
-### Procedure
+- Edit parameters in variables section to see the change in position diagram.
+- By changing offset the quick return ratio of the mechanism can be changed.
+- Observe the variation in QRR due to change in the offset.
