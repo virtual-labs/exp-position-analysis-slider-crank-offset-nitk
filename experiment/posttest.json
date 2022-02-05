@@ -2,38 +2,72 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Angular acceleration of connecting rod at 0<sup>o</sup> crank angle?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Maximum Clockwise",
+        "b": "0",
+        "c": "Maximum Anticlockwise",
+        "d": "None of these"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
       },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+      "correctAnswer": "b",
+      "difficulty": ""
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "In a zero offset slider crank mechanism with 5cm crank, l/r ratio 2.5 rotating at constant angular velocity of 1rad/s, what is the magnitude of linear acceleration of the slider at 180<sup>o</sup> crank angle",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "3cm/s<sup>2</sup>",
+        "b": "0",
+        "c": "7rad/s<sup>2</sup>",
+        "d": "Data insufficient"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
       },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
+      "correctAnswer": "a",
+      "difficulty": ""
+    },
+    {
+      "question": "What is the centripetal acceleration of connecting rod in zero offset slider crank mechanism with 1cm crank rotating at constant angular velocity &omega?",
+      "answers": {
+        "a": "0",
+        "b": "&omega;<sup>2</sup>",
+        "c": "1/omega; rad/s<sup>2</sup>",
+        "d": "None of these"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": ""
+    },
+    {
+      "question": "Crank starts from rest and rotates with a constant angular acceleration of 2rad/s<sup>2</sup>. What will be its angular velocity after 5seconds ",
+      "answers": {
+        "a": "0",
+        "b": "10rad/s",
+        "c": "2rad/s",
+        "d": "5rad/s"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": ""
     }
   ]
 }

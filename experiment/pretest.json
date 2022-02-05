@@ -1,39 +1,91 @@
 {
-  "version": 2.0,
-  "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+    "version": 2.0,
+    "questions": [
+      {
+        "question": "QRR for zero offset slider crank mechanism?",
+        "answers": {
+          "a": "0",
+          "b": "0.5",
+          "c": "1",
+          "d": "None of these"
+        },
+        "explanations": {
+          "a": "",
+          "b": "",
+          "c": "",
+          "d": ""
+        },
+        "correctAnswer": "c",
+        "difficulty": ""
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      {
+        "question": "In offset slider crank mechanism, for a given input crank angle how many positions of the slider are possible for fixed link lengths?",
+        "answers": {
+          "a": "Only 1",
+          "b": "At least 2",
+          "c": "More than 2",
+          "d": "Depends on link lengths"
+        },
+        "explanations": {
+          "a": "",
+          "b": "",
+          "c": "",
+          "d": ""
+        },
+        "correctAnswer": "a",
+        "difficulty": ""
       },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+      {
+        "question": "How many cylindrical joints does a slider crank mechanism have?",
+        "answers": {
+          "a": "3",
+          "b": "4",
+          "c": "1",
+          "d": "0"
+        },
+        "explanations": {
+          "a": "",
+          "b": "",
+          "c": "",
+          "d": ""
+        },
+        "correctAnswer": "a",
+        "difficulty": ""
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      {
+        "question": "How many prismatic joints does a slider crank mechanism have",
+        "answers": {
+          "a": "3",
+          "b": "0",
+          "c": "4",
+          "d": "1"
+        },
+        "explanations": {
+          "a": "",
+          "b": "",
+          "c": "",
+          "d": ""
+        },
+        "correctAnswer": "d",
+        "difficulty": ""
       },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
-  ]
-}
+      {
+        "question": "In offset slider crank positionAt which of the following crank angle positions is the slider at its extreme position",
+        "answers": {
+          "a": "depends only on offset",
+          "b": "depends on link lengths and offset",
+          "c": "depends only on link lengths",
+          "d": "0<sup>o</sup> and 180<sup>o</sup>"
+        },
+        "explanations": {
+          "a": "",
+          "b": "",
+          "c": "",
+          "d": ""
+        },
+        "correctAnswer": "b",
+        "difficulty": ""
+      }
+    ]
+  }
+          
