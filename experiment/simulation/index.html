@@ -95,7 +95,7 @@
           </li>
           <li class="tool-list">
             <img
-              id="playpausebutton"
+              id="playpausebutton"  title="Play/Pause"
               onclick="simstate()"
               src="images/bluepausedull.svg"
               alt=""
@@ -105,7 +105,7 @@
           </li>
           <li class="tool-list">
             <img
-              id="rotationbutton"
+              id="rotationbutton"  title="Rotate"
               onclick="rotstate()"
               src="images/bluecwdull.svg"
               alt=""
@@ -131,6 +131,7 @@
                 <!-- Region for comment / question prompts -->
                 <div id="commentboxleft"></div>
                 <div id="commentboxright"></div>
+                <div id="commentboxright1"></div>
               </div>
             </div>
           </div>
@@ -141,7 +142,7 @@
                 <div class="var-div">
                   <div class="input-container">
                     <label for="r2spinner">r</label>
-                    <input class="var-spinner" id="r2spinner" name="value" />
+                    <input class="var-spinner" type="number" id="r2spinner" name="value" />
                     <span>mm</span>
                   </div>
                   <div class="var-slider" id="r2slider"></div>
@@ -149,7 +150,7 @@
                 <div class="var-div">
                   <div class="input-container">
                     <label for="r3spinner">l</label>
-                    <input class="var-spinner" id="r3spinner" name="value" />
+                    <input class="var-spinner" type="number" id="r3spinner" name="value" />
                     <span>mm</span>
                   </div>
                   <div class="var-slider" id="r3slider"></div>
@@ -163,7 +164,7 @@
                   <div class="input-container">
                     <label for="offsetspinner">Offset</label>
                     <input
-                      class="var-spinner"
+                      class="var-spinner" type="number"
                       id="offsetspinner"
                       name="value"
                     />
@@ -175,7 +176,7 @@
                   <div class="input-container">
                     <label for="theta2spinner">&theta;</label>
                     <input
-                      class="var-spinner"
+                      class="var-spinner" type="number"
                       id="theta2spinner"
                       name="value"
                     />
@@ -187,7 +188,7 @@
                   <div class="input-container">
                     <label for="omega2spinner">&omega;</label>
                     <input
-                      class="var-spinner"
+                      class="var-spinner" type="number"
                       id="omega2spinner"
                       name="value"
                     />
