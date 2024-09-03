@@ -127,21 +127,24 @@ function varinit() {
 //change #id and repeat block for new variable. Make sure new <div> with appropriate #id is included in the markup
 function varchange() {
   //Variable r2 slider and number input types
-  $("#r2slider").slider({ max: 60, min: 20, step: 2 }); // slider initialisation : jQuery widget
-  $("#r2spinner").spinner({ max: 60, min: 20, step: 2 }); // number initialisation : jQuery widget
+  $("#r2slider").slider({ max: 46, min: 20, step: 2 }); // slider initialisation : jQuery widget
+  $("#r2spinner").spinner({ max: 46, min: 20, step: 2 }); // number initialisation : jQuery widget
   // monitoring change in value and connecting slider and number
   // setting trace point coordinate arrays to empty on change of link length
   $("#r2slider").on("slide", function (e, ui) {
     $("#r2spinner").spinner("value", ui.value);
+    updateR3Limits(ui.value, false);
     ptx = [];
     pty = [];
   });
   $("#r2spinner").on("spin", function (e, ui) {
     $("#r2slider").slider("value", ui.value);
+    updateR3Limits(ui.value, false);
     ptx = [];
     pty = [];
   });
   $("#r2spinner").on("change", function () {
+    updateR3Limits($("#r2spinner").spinner("value"), false);
     varchange();
   });
 
@@ -209,15 +212,21 @@ function varchange() {
   // setting trace point coordinate arrays to empty on change of link length
   $("#offsetslider").on("slide", function (e, ui) {
     $("#offsetspinner").spinner("value", ui.value);
+    // updateR3Limits(ui.value, false);
+    // updateR3Limits(l, false);
     ptx = [];
     pty = [];
   });
   $("#offsetspinner").on("spin", function (e, ui) {
     $("#offsetslider").slider("value", ui.value);
+    // updateR3Limits(ui.value, false);
+    // updateR3Limits(l, false);
     ptx = [];
     pty = [];
   });
   $("#offsetspinner").on("change", function () {
+    // updateR3Limits($("#r3spinner").spinner("value"), false);
+    // updateR3Limits(l, false);
     varchange();
   });
   varupdate();
@@ -232,7 +241,12 @@ function varupdate() {
 
   r = $("#r2spinner").spinner("value");
   l = $("#r3spinner").spinner("value");
+  // r = $("#r2spinner").spinner("value");
+  // l = $("#r3spinner").spinner("value");
+  updateR3Limits(r, true);
+
   offset = $("#offsetspinner").spinner("value");
+  // updateR3Limits(l, false);
   $("#omega2set").hide();
   $("#r3slider").slider({ max: 6 * $("#r2slider").slider("value") });
   $("#r3slider").slider({ min: 2.5 * $("#r2slider").slider("value") });
@@ -494,11 +508,33 @@ function drawrem(context) {
   context.fillStyle = "#000000";
   context.font = "600 16px  'Nunito', sans-serif";
   context.fillText(
+
     "Quick Return Ratio = \u03B1/\u03B2 = " +
       roundd((t1 - t2) / (360 - t1 + t2), 2),
+     
     300,
     15
+
   );
+  console.log(t1-t2);
+  if (isNaN(t1 - t2)) {
+    console.log("Not a number");
+    document.getElementById("simscreen").style.visibility="hidden";
+    document.getElementById("canvas-container").style.height="250px";
+    document.getElementById("commentboxleft").style.display="none";
+    document.getElementById("commentboxright").style.display="none";
+    document.getElementById("commentboxright1").style.display="block";
+    document.getElementById("commentboxright1").innerHTML = 
+         'The quick return ratio is reaching the infinity.<br> Please change the offset slider value to avoid this condition</div>';
+}
+else {
+  // console.log("This is a number");
+  document.getElementById("simscreen").style.visibility="visible";
+  document.getElementById("canvas-container").style.height="auto";
+  document.getElementById("commentboxleft").style.display="block";
+  document.getElementById("commentboxright").style.display="block";
+  document.getElementById("commentboxright1").style.display="none";
+}
 
   context.restore();
 
@@ -599,6 +635,33 @@ function drawrem(context) {
   context.restore();
 }
 
+function updateR3Limits(r2Value, updateSlider) {
+  const maxR3 = 6 * r2Value;
+  const minR3 = 2.5 * r2Value;
+
+  $('#r3slider').slider("option", "max", maxR3);
+  $('#r3slider').slider("option", "min", minR3);
+  $('#r3spinner').spinner("option", "max", maxR3);
+  $('#r3spinner').spinner("option", "min", minR3);
+
+  const r3Value = $('#r3spinner').spinner("value");
+  if (r3Value < minR3) {
+    $('#r3spinner').spinner("value", minR3);
+    if (updateSlider) {
+      $('#r3slider').slider("value", minR3);
+    }
+  } else if (r3Value > maxR3) {
+    $('#r3spinner').spinner("value", maxR3);
+    if (updateSlider) {
+      $('#r3slider').slider("value", maxR3);
+    }
+  } else {
+    $('#r3spinner').spinner("value", r3Value);
+    if (updateSlider) {
+      $('#r3slider').slider("value", r3Value);
+    }
+  }
+}
 // prints comments passed as 'commenttext' in location specified by 'commentloc' in the comments box;
 // 0 : Single comment box, 1 : Left comment box, 2 : Right comment box
 function printcomment(commenttext, commentloc) {
