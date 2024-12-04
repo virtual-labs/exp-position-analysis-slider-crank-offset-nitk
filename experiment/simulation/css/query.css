@@ -9,37 +9,14 @@ em:current font size
 /* Below 1344px (Smaller Desktops) */
 /* **************************** */
 
-@media (min-width: 1200px) {
-  canvas#simscreen {
-    margin-left: 145px;
-  }
-
-  div#commentboxleft {
-    left: 18px;
-    top: 475px;
-    font-size: 16px;
-  }
-
-  div#commentboxright {
-    left: 406px;
-    top: 475px;
-    text-align: left;
-    font-size: 16px;
-  }
-
-  #variables {
-    width: 200%;
-  }
-}
-
 /* **************************** */
 /* Below 1200px (Lanscape Tablets) */
 /* **************************** */
 
 @media (max-width: 75em) {
   body {
-    width: 100%;
-    margin: unset;
+    max-width: 120rem;
+    margin: 0 auto;
   }
   .title-div h1 {
     font-size: 2.5rem;
@@ -58,35 +35,10 @@ em:current font size
     width: 3rem;
     height: 3rem;
   }
-  .canvas {
-    display: block;
-    width: 100%;
-    height: 100%;
-    /* background-color: red; */
-  }
+
   .div__control img {
     width: 3rem;
     height: 2.8rem;
-  }
-  canvas#simscreen {
-    margin-left: 125px;
-  }
-
-  div#commentboxleft {
-    left: 18px;
-    top: 475px;
-    font-size: 16px;
-  }
-
-  div#commentboxright {
-    left: 510px;
-    top: 475px;
-    text-align: left;
-    font-size: 16px;
-  }
-
-  #variables {
-    width: 200%;
   }
 }
 
@@ -95,6 +47,10 @@ em:current font size
 /* **************************** */
 
 @media (max-width: 59em) {
+  body {
+    width: 100%;
+    margin: 0;
+  }
   .tool-link:link,
   .tool-link:visited {
     gap: 0.5rem;
@@ -122,6 +78,10 @@ em:current font size
     justify-content: space-evenly;
     border-radius: 0;
     scroll-behavior: auto;
+    margin: 0;
+  }
+  .main {
+    grid-column: 1/-1;
   }
   .tool-menu {
     list-style: none;
@@ -146,44 +106,12 @@ em:current font size
   .main__task-div:nth-child(4) {
     margin-bottom: 6rem;
   }
-  .canvas {
-    display: block;
-    width: 100%;
-    height: 100%;
-    /* background-color: red; */
-  }
+
   .main-section {
     grid-template-columns: 1fr;
   }
   .canvas__div {
     grid-template-columns: 1fr;
-  }
-  .canvas {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-top: 1px solid rgba(177, 176, 176, 0.855);
-  }
-  canvas#simscreen {
-    margin-left: 0px;
-  }
-
-  div#commentboxleft {
-    left: 18px;
-    top: 475px;
-    font-size: 16px;
-  }
-
-  div#commentboxright {
-    left: 570px;
-    top: 475px;
-    text-align: left;
-    font-size: 16px;
-  }
-
-  #variables {
-    width: 100%;
   }
 }
 
@@ -196,33 +124,6 @@ em:current font size
   }
   .canvas__div {
     grid-template-columns: 1fr;
-  }
-  .canvas {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-top: 1px solid rgba(177, 176, 176, 0.855);
-  }
-  canvas#simscreen {
-    margin-left: 0px;
-  }
-
-  div#commentboxleft {
-    left: 18px;
-    top: 475px;
-    font-size: 16px;
-  }
-
-  div#commentboxright {
-    left: 480px;
-    top: 475px;
-    text-align: left;
-    font-size: 16px;
-  }
-
-  #variables {
-    width: 100%;
   }
 }
 
@@ -257,48 +158,12 @@ em:current font size
   .cross-img {
     width: 60%;
   }
-  .canvas {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-top: 1px solid rgba(177, 176, 176, 0.855);
-  }
-  canvas#simscreen {
-    margin-left: 0px;
-  }
-
-  div#commentboxleft {
-    left: 10px;
-    top: 475px;
-    font-size: 14px;
-  }
-
-  div#commentboxright {
-    left: 350px;
-    top: 475px;
-    text-align: left;
-    font-size: 14px;
-  }
-
-  #variables {
-    width: 100%;
-  }
 }
 
 /* **************************** */
 /* Below 540px (Smaller Tablets) */
 /* **************************** */
 @media (max-width: 34em) {
-  .container {
-    padding: 0.5rem;
-    gap: 1rem;
-  }
-
-  .title-div-container {
-    padding: 0.5rem 0.5rem 0rem 0.5rem;
-  }
-
   .title-div h1 {
     padding: 0.2rem;
 
@@ -357,27 +222,6 @@ em:current font size
   }
   .footer {
     margin-bottom: 7rem;
-  }
-  div#commentboxleft {
-    position: absolute;
-    left: 10px;
-    top: 450px;
-    height: 65px;
-    width: 285px;
-    text-align: left;
-    font-size: 14px;
-    font-family: "Nunito", sans-serif;
-  }
-
-  div#commentboxright {
-    position: absolute;
-    left: 10px;
-    top: 500px;
-    height: 65px;
-    width: 285px;
-    text-align: left;
-    font-size: 14px;
-    font-family: "Nunito", sans-serif;
   }
 }
 
