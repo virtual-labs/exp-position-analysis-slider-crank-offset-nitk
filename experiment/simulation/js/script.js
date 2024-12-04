@@ -293,7 +293,7 @@ $('#omega2spinner').spinner("disable"); */
   t1 = deg(Math.PI + Math.asin(offset / (l - r)));
   t2 = deg(Math.asin(offset / (l + r)));
   printcomment(
-    "Limits of l for the given r <br> " +
+    "Limits of l for the given r &nbsp;&nbsp;: " +
       $("#r3spinner").spinner("option", "min") +
       " and " +
       $("#r3spinner").spinner("option", "max") +
@@ -508,33 +508,30 @@ function drawrem(context) {
   context.fillStyle = "#000000";
   context.font = "600 16px  'Nunito', sans-serif";
   context.fillText(
-
     "Quick Return Ratio = \u03B1/\u03B2 = " +
       roundd((t1 - t2) / (360 - t1 + t2), 2),
-     
+
     300,
     15
-
   );
-  console.log(t1-t2);
+  console.log(t1 - t2);
   if (isNaN(t1 - t2)) {
     console.log("Not a number");
-    document.getElementById("simscreen").style.visibility="hidden";
-    document.getElementById("canvas-container").style.height="250px";
-    document.getElementById("commentboxleft").style.display="none";
-    document.getElementById("commentboxright").style.display="none";
-    document.getElementById("commentboxright1").style.display="block";
-    document.getElementById("commentboxright1").innerHTML = 
-         'The quick return ratio is reaching the infinity.<br> Please change the offset slider value to avoid this condition</div>';
-}
-else {
-  // console.log("This is a number");
-  document.getElementById("simscreen").style.visibility="visible";
-  document.getElementById("canvas-container").style.height="auto";
-  document.getElementById("commentboxleft").style.display="block";
-  document.getElementById("commentboxright").style.display="block";
-  document.getElementById("commentboxright1").style.display="none";
-}
+    document.getElementById("simscreen").style.visibility = "hidden";
+    // document.getElementById("canvas-container").style.height="250px";
+    document.getElementById("commentboxleft").style.display = "none";
+    document.getElementById("commentboxright").style.display = "none";
+    document.getElementById("commentboxright1").style.display = "block";
+    document.getElementById("commentboxright1").innerHTML =
+      "The quick return ratio is reaching the infinity.<br> Please change the offset slider value to avoid this condition</div>";
+  } else {
+    // console.log("This is a number");
+    document.getElementById("simscreen").style.visibility = "visible";
+    // document.getElementById("canvas-container").style.height="auto";
+    document.getElementById("commentboxleft").style.display = "block";
+    document.getElementById("commentboxright").style.display = "block";
+    document.getElementById("commentboxright1").style.display = "none";
+  }
 
   context.restore();
 
@@ -639,26 +636,26 @@ function updateR3Limits(r2Value, updateSlider) {
   const maxR3 = 6 * r2Value;
   const minR3 = 2.5 * r2Value;
 
-  $('#r3slider').slider("option", "max", maxR3);
-  $('#r3slider').slider("option", "min", minR3);
-  $('#r3spinner').spinner("option", "max", maxR3);
-  $('#r3spinner').spinner("option", "min", minR3);
+  $("#r3slider").slider("option", "max", maxR3);
+  $("#r3slider").slider("option", "min", minR3);
+  $("#r3spinner").spinner("option", "max", maxR3);
+  $("#r3spinner").spinner("option", "min", minR3);
 
-  const r3Value = $('#r3spinner').spinner("value");
+  const r3Value = $("#r3spinner").spinner("value");
   if (r3Value < minR3) {
-    $('#r3spinner').spinner("value", minR3);
+    $("#r3spinner").spinner("value", minR3);
     if (updateSlider) {
-      $('#r3slider').slider("value", minR3);
+      $("#r3slider").slider("value", minR3);
     }
   } else if (r3Value > maxR3) {
-    $('#r3spinner').spinner("value", maxR3);
+    $("#r3spinner").spinner("value", maxR3);
     if (updateSlider) {
-      $('#r3slider').slider("value", maxR3);
+      $("#r3slider").slider("value", maxR3);
     }
   } else {
-    $('#r3spinner').spinner("value", r3Value);
+    $("#r3spinner").spinner("value", r3Value);
     if (updateSlider) {
-      $('#r3slider').slider("value", r3Value);
+      $("#r3slider").slider("value", r3Value);
     }
   }
 }
@@ -667,19 +664,19 @@ function updateR3Limits(r2Value, updateSlider) {
 function printcomment(commenttext, commentloc) {
   if (commentloc == 0) {
     document.getElementById("commentboxright").style.visibility = "hidden";
-    document.getElementById("commentboxleft").style.width = "570px";
+    // document.getElementById("commentboxleft").style.width = "570px";
     document.getElementById("commentboxleft").innerHTML = commenttext;
   } else if (commentloc == 1) {
     document.getElementById("commentboxright").style.visibility = "visible";
-    document.getElementById("commentboxleft").style.width = "285px";
+    // document.getElementById("commentboxleft").style.width = "285px";
     document.getElementById("commentboxleft").innerHTML = commenttext;
   } else if (commentloc == 2) {
     document.getElementById("commentboxright").style.visibility = "visible";
-    document.getElementById("commentboxleft").style.width = "285px";
+    // document.getElementById("commentboxleft").style.width = "285px";
     document.getElementById("commentboxright").innerHTML = commenttext;
   } else {
     document.getElementById("commentboxright").style.visibility = "hidden";
-    document.getElementById("commentboxleft").style.width = "570px";
+    // document.getElementById("commentboxleft").style.width = "570px";
     document.getElementById("commentboxleft").innerHTML =
       "<center>please report this issue to adityaraman@gmail.com</center>";
     // ignore use of deprecated tag <center> . Code is executed only if printcomment function receives inappropriate commentloc value
