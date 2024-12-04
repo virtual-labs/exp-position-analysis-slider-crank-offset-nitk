@@ -44,17 +44,17 @@
     onload="editcss();startsim();varinit();
 "
   >
-    <div class="title-div-container">
-      <div class="title-div">
-        <div class="logo-div">
-          <a href="#"
-            ><img src="images/logo_nitk.png" alt="Logo" class="logo"
-          /></a>
-        </div>
-        <h1>Slider Crank Mechanism</h1>
-      </div>
-    </div>
     <div class="container">
+      <div class="title-div-container">
+        <div class="title-div">
+          <div class="logo-div">
+            <a href="#"
+              ><img src="images/logo_nitk.png" alt="Logo" class="logo"
+            /></a>
+          </div>
+          <h1>Slider Crank Mechanism</h1>
+        </div>
+      </div>
       <div class="sidebar">
         <ul class="tool-menu">
           <li class="tool-list">
@@ -95,7 +95,8 @@
           </li>
           <li class="tool-list">
             <img
-              id="playpausebutton"  title="Play/Pause"
+              id="playpausebutton"
+              title="Play/Pause"
               onclick="simstate()"
               src="images/bluepausedull.svg"
               alt=""
@@ -105,7 +106,8 @@
           </li>
           <li class="tool-list">
             <img
-              id="rotationbutton"  title="Rotate"
+              id="rotationbutton"
+              title="Rotate"
               onclick="rotstate()"
               src="images/bluecwdull.svg"
               alt=""
@@ -122,13 +124,15 @@
 
             <div class="canvas__div">
               <div id="canvas-container">
-                <canvas id="simscreen" height="400px" width="550px"></canvas>
-
-                <div id="titleincanvas"></div>
-                <div id="datatable1" class="datatable"></div>
-                <div id="datatable2" class="datatable"></div>
-
-                <!-- Region for comment / question prompts -->
+                <canvas
+                  id="simscreen"
+                  height="400px"
+                  width="550px"
+                  class="canvas"
+                ></canvas>
+              </div>
+              <!-- Region for comment / question prompts -->
+              <div class="comments">
                 <div id="commentboxleft"></div>
                 <div id="commentboxright"></div>
                 <div id="commentboxright1"></div>
@@ -142,7 +146,12 @@
                 <div class="var-div">
                   <div class="input-container">
                     <label for="r2spinner">r</label>
-                    <input class="var-spinner" type="number" id="r2spinner" name="value" />
+                    <input
+                      class="var-spinner"
+                      type="number"
+                      id="r2spinner"
+                      name="value"
+                    />
                     <span>mm</span>
                   </div>
                   <div class="var-slider" id="r2slider"></div>
@@ -150,7 +159,12 @@
                 <div class="var-div">
                   <div class="input-container">
                     <label for="r3spinner">l</label>
-                    <input class="var-spinner" type="number" id="r3spinner" name="value" />
+                    <input
+                      class="var-spinner"
+                      type="number"
+                      id="r3spinner"
+                      name="value"
+                    />
                     <span>mm</span>
                   </div>
                   <div class="var-slider" id="r3slider"></div>
@@ -164,7 +178,8 @@
                   <div class="input-container">
                     <label for="offsetspinner">Offset</label>
                     <input
-                      class="var-spinner" type="number"
+                      class="var-spinner"
+                      type="number"
                       id="offsetspinner"
                       name="value"
                     />
@@ -176,7 +191,8 @@
                   <div class="input-container">
                     <label for="theta2spinner">&theta;</label>
                     <input
-                      class="var-spinner" type="number"
+                      class="var-spinner"
+                      type="number"
                       id="theta2spinner"
                       name="value"
                     />
@@ -188,7 +204,8 @@
                   <div class="input-container">
                     <label for="omega2spinner">&omega;</label>
                     <input
-                      class="var-spinner" type="number"
+                      class="var-spinner"
+                      type="number"
                       id="omega2spinner"
                       name="value"
                     />
