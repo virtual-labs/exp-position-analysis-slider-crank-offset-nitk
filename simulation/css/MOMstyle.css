@@ -1,0 +1,44 @@
+
+
+/* canvas#simscreen2 {
+  position: absolute;
+  left: 30px;
+  top: 250px;
+  height: 400px;
+  width: 550px;
+}
+
+canvas#simscreen {
+  position: absolute;
+  left: 17px;
+  top: 86px;
+  height: 414px;
+  width: 575px;
+} */
+
+div#commentboxleft {
+  position: absolute;
+  left: 18px;
+  top: 501px;
+  height: 65px;
+  width: 285px;
+  text-align: left;
+  font-size: 15px;
+  font-family: "Comic Sans MS", sans-serif;
+}
+
+div#commentboxright {
+  position: absolute;
+  left: 305px;
+  top: 501px;
+  height: 65px;
+  width: 285px;
+  text-align: right;
+  font-size: 16px;
+  font-family: "Comic Sans MS", sans-serif;
+}
+
+#variables{
+  width: 200%;
+}
+

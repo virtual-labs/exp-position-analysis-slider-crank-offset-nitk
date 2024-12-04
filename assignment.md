@@ -1,0 +1,1 @@
+1. What is the variation in quick return ratio with change in offset for fixed crank shaft and connecting rod length in offset slider crank mechanism?
