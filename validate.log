@@ -1,0 +1,11 @@
+{
+  _: [],
+  f: [
+    '/home/runner/work/exp-position-analysis-slider-crank-offset-nitk/exp-position-analysis-slider-crank-offset-nitk/experiment-descriptor.json'
+  ],
+  files: [
+    '/home/runner/work/exp-position-analysis-slider-crank-offset-nitk/exp-position-analysis-slider-crank-offset-nitk/experiment-descriptor.json'
+  ],
+  '$0': 'validate'
+}
+Validated true
